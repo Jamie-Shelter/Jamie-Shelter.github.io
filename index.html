@@ -1,0 +1,57 @@
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+        <link rel="preload, stylesheet" as="font" crossorigin="crossorigin" href="https://fonts.googleapis.com/css?family=Lato:300&display=swap">
+        <script defer  language="JavaScript" type="text/javascript" src="./main.js"></script>
+        <link rel="stylesheet" type="text/css" href="./main.css">
+    </head>
+    <body>
+        
+        <h1>UTM Builder</h1>
+        <div class="input">
+        <input onkeyup="createUtm()" id="url-input" type="text" name="" value="www.shelter.org.uk" required>
+        <span class="bar"></span>
+        <label for="url-input">Url</label>
+        </div>
+
+        <div class="input">
+        <input onkeyup="createUtm()" id="ac-input" type="text" name="" value="" required>
+        <span class="bar"></span>
+        <label for="ac-input">Appeal Code</label>
+        </div>
+
+        <div class="input">
+        <input onkeyup="createUtm()" id="source-input" type="text" name="" value="" required>
+        <span class="bar"></span>
+        <label for="source-input">Source</label>
+        </div>
+
+        <div class="input">
+        <input onkeyup="createUtm()" id="medium-input" type="text" name="" value="" required>
+        <span class="bar"></span>
+        <label for="medium-input">Medium</label>
+        </div>
+
+        <div class="input">
+        <input onkeyup="createUtm()" id="campaign-input" type="text" name="" value="" required>
+        <span class="bar"></span>
+        <label for="campaign-input">Campaign</label>
+        </div>
+
+        <div class="input">
+        <input onkeyup="createUtm()" id="content-input" type="text" name="" value="" required>
+        <span class="bar"></span>
+        <label for="content-input">Content</label>
+        </div>
+
+        <div class="input">
+        <input onkeyup="createUtm()" id="term-input" type="text" name="" value="" required>
+        <span class="bar"></span>
+        <label for="term-input">Terms</label>
+        </div>
+
+        <textarea id="utm" readonly></textarea>
+        <button onclick="copy()" id="copy">Copy UTM</button>
+    </body>
+</html>
