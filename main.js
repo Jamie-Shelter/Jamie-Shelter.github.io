@@ -30,9 +30,9 @@ function addAcSource() {
 function addUtmSource() {
   var utmSource = document.getElementById('source-input').value;
   if (utmSource != '') {
-    return 'utm_source=' + utmSource.split(' ').join('%20')
+    return ('&') + 'utm_source=' + utmSource.split(' ').join('%20')
   } else {
-    return ''
+    return ' INVALID - YOU NEED A SOURCE '
   }
 }
 
@@ -41,7 +41,7 @@ function addUtmMedium() {
   if (utmMedium != '') {
     return '&utm_medium=' + utmMedium.split(' ').join('%20')
   } else {
-    return ''
+    return ' INVALID - YOU NEED A MEDIUM '
   }
 }
 
@@ -72,15 +72,22 @@ function addUtmTerm() {
   }
 }
 
+
 function createUtm() {
   var utm = addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
   document.getElementById("utm").value = utm;
 }
 
-function copy() {
-  var utmValue = document.getElementById('utm'),
-      copyButtonValue = document.getElementById('copy');
-  utmValue.select();
-  document.execCommand('copy');
-  copyButtonValue.innerHTML = "Copy UTM";
+function yourUtm() {
+  document.getElementById("makeutm").innerHTML = utm;
+}
+
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Your UTM is:";
+  document.getElementById("yourUTM").innerHTML = addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
+}
+
+function qr() {
+  document.getElementById("qrLink").innerHTML = "https://api.qrserver.com/v1/create-qr-code/?data=" + addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
 }

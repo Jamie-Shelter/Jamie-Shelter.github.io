@@ -4,54 +4,93 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
         <link rel="preload, stylesheet" as="font" crossorigin="crossorigin" href="https://fonts.googleapis.com/css?family=Lato:300&display=swap">
         <script defer  language="JavaScript" type="text/javascript" src="./main.js"></script>
-        <link rel="stylesheet" type="text/css" href="./main.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <h1>Shelter UTM & Appeal Code Builder</h1>
+        <h2>Unsure what you need to do? Check the UTM Standards <a href="https://shelteruk-my.sharepoint.com/:b:/g/personal/sam_berger_shelter_org_uk/Ed9DcO3ClDdMtWHUSsSrag0Bm4WAWmmh1RkAraUxCwWPwA?e=O9QhHA">here</a></h2>
+        <p>Made by the PDI Team - Seen a bug? <a href="mailto:jamie_tringham@shelter.org.uk"> report it</a>
+        <p>Want PDI to make your team something cool? <a href="mailto:productdevandinnovation@shelter.org.uk"> request it</a>
+        <div class="input">
+        <label for="url-input">Url</label> </br>
+        <input onkeyup="createUtm()" id="url-input" type="text" name="" value="https://england.shelter.org.uk/" required>
+        <span class="bar"></span>
+        </div>
+      </br>
     </head>
     <body>
         
-        <h1>UTM Builder</h1>
+        
         <div class="input">
-        <input onkeyup="createUtm()" id="url-input" type="text" name="" value="www.shelter.org.uk" required>
-        <span class="bar"></span>
-        <label for="url-input">Url</label>
-        </div>
-
-        <div class="input">
+        <label for="url-input">Appeal Code</label> </br>
         <input onkeyup="createUtm()" id="ac-input" type="text" name="" value="" required>
         <span class="bar"></span>
-        <label for="ac-input">Appeal Code</label>
         </div>
+      </br>
 
         <div class="input">
-        <input onkeyup="createUtm()" id="source-input" type="text" name="" value="" required>
+          <label for="source-input">Source - REQUIRED</label> </br>
+        <input onkeyup="createUtm()" id="source-input" type="text" name="" placeholder="REQUIRED" required>
         <span class="bar"></span>
-        <label for="source-input">Source</label>
         </div>
+      </br>
 
         <div class="input">
-        <input onkeyup="createUtm()" id="medium-input" type="text" name="" value="" required>
-        <span class="bar"></span>
-        <label for="medium-input">Medium</label>
+          <label for="medium-input">Medium - REQUIRED</label> </br>
+          <select name="" value="" id="medium-input" type="select">
+            <option value="">REQUIRED</option>
+            <option value="paid_social">Paid Social</option>
+            <option value="Social">Social</option>
+            <option value="email">Email</option>
+            <option value="cpc">CPC</option>
+            <option value="print">Print</option>
+            <option value="TV">TV</option>
+            <option value="SMS">SMS</option>
+            <option value="Partner_Link">Partner Link</option>
+            <option value="Banner">Banner</option>
+            <option value="Organic">Organic</option>
+            <option value="Refferal">Referral</option>
+            <option value="Direct">Direct</option>
+          </select>
         </div>
+      </br>
 
         <div class="input">
+          <label for="medium-input">Campaign</label> </br>
+
         <input onkeyup="createUtm()" id="campaign-input" type="text" name="" value="" required>
         <span class="bar"></span>
-        <label for="campaign-input">Campaign</label>
         </div>
+      </br>
 
         <div class="input">
+          <label for="content-input">Content</label></br>
         <input onkeyup="createUtm()" id="content-input" type="text" name="" value="" required>
         <span class="bar"></span>
-        <label for="content-input">Content</label>
         </div>
+      </br>
 
         <div class="input">
+          <label for="content-input">Terms</label></br>
         <input onkeyup="createUtm()" id="term-input" type="text" name="" value="" required>
         <span class="bar"></span>
-        <label for="term-input">Terms</label>
         </div>
+      </br>
 
-        <textarea id="utm" readonly></textarea>
-        <button onclick="copy()" id="copy">Copy UTM</button>
+        <div>
+          <button onclick="myFunction()">Generate UTM</button>
+
+          <h1 id="demo"></h1>
+        </br>
+
+          <p id="yourUTM"></p>
+          
+          <button onclick="qr()">Generate QR</button>
+          <a id="qrLink"></p>
+       </span>
+       
+
     </body>
+
+    </div>
+
+
 </html>
