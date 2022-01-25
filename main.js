@@ -85,7 +85,7 @@ function myFunction() {
 }
 if(document.getElementById("source-input").value.length == 0)
 {
-    alert("No Source! FILL THIS IN OR USE ANOTHER WEBSITE")
+    alert("No Source! YOU WILL NOT KNOW WHERE ")
 }
 if(document.getElementById("medium-input").value.length == 0)
 {
