@@ -31,8 +31,6 @@ function addUtmSource() {
   var utmSource = document.getElementById('source-input').value;
   if (utmSource != '') {
     return ('&') + 'utm_source=' + utmSource.split(' ').join('%20')
-  } else {
-    return ' INVALID - YOU NEED A SOURCE '
   }
 }
 
@@ -40,9 +38,7 @@ function addUtmMedium() {
   var utmMedium = document.getElementById('medium-input').value;
   if (utmMedium != '') {
     return '&utm_medium=' + utmMedium.split(' ').join('%20')
-  } else {
-    return ' INVALID - YOU NEED A MEDIUM '
-  }
+  } 
 }
 
 function addUtmCampaign() {
@@ -72,7 +68,6 @@ function addUtmTerm() {
   }
 }
 
-
 function createUtm() {
   var utm = addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
   document.getElementById("utm").value = utm;
@@ -84,10 +79,27 @@ function yourUtm() {
 
 
 function myFunction() {
+  if(document.getElementById("ac-input").value.length == 0)
+{
+    alert("No Appeal Code! FILL THIS IN OR USE ANOTHER WEBSITE")
+}
+if(document.getElementById("source-input").value.length == 0)
+{
+    alert("No Source! FILL THIS IN OR USE ANOTHER WEBSITE")
+}
+if(document.getElementById("medium-input").value.length == 0)
+{
+    alert("No Medium Code! FILL THIS IN OR USE ANOTHER WEBSITE")
+}
   document.getElementById("demo").innerHTML = "Your UTM is:";
-  document.getElementById("yourUTM").innerHTML = addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
+    if(document.getElementById("ac-input").value.length == 0)
+    {
+      document.getElementById("yourUTM").innerHTML = "error - no appeal code. If you don't need an appeal code, use another link builder"
+    }
+    else
+      document.getElementById("yourUTM").innerHTML = addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
 }
 
 function qr() {
-  document.getElementById("qrLink").innerHTML = "https://api.qrserver.com/v1/create-qr-code/?data=" + addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
+  document.getElementById("qrLink").innerHTML = "Follow this link for a QR code" + "https://api.qrserver.com/v1/create-qr-code/?data=" + addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
 }

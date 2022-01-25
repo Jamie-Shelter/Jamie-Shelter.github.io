@@ -9,9 +9,12 @@
         <h2>Unsure what you need to do? Check the UTM Standards <a href="https://shelteruk-my.sharepoint.com/:b:/g/personal/sam_berger_shelter_org_uk/Ed9DcO3ClDdMtWHUSsSrag0Bm4WAWmmh1RkAraUxCwWPwA?e=O9QhHA">here</a></h2>
         <p>Made by the PDI Team - Seen a bug? <a href="mailto:jamie_tringham@shelter.org.uk"> report it</a>
         <p>Want PDI to make your team something cool? <a href="mailto:productdevandinnovation@shelter.org.uk"> request it</a>
+        <p><b><strong>YOU</strong></b> are responsible for making sure the information is correct on this form</p>
+
+
         <div class="input">
         <label for="url-input">Url</label> </br>
-        <input onkeyup="createUtm()" id="url-input" type="text" name="" value="https://england.shelter.org.uk/" required>
+        <input onkeyup="createUtm()" id="url-input" type="text" name="" value="https://england.shelter.org.uk/donate" required>
         <span class="bar"></span>
         </div>
       </br>
@@ -20,9 +23,11 @@
         
         
         <div class="input">
-        <label for="url-input">Appeal Code</label> </br>
-        <input onkeyup="createUtm()" id="ac-input" type="text" name="" value="" required>
+        <label for="url-input">Appeal / Campaign Code</label> </br>
+        <input onkeyup="createUtm()" id="ac-input" type="text" name="" value="" placeholder="REQUIRED">
         <span class="bar"></span>
+        <div class="hovertoshow">Move your mouse here for definition</div>
+        <div class="hide">This is how we track income and where it came from. Ask DMI for one</div>
         </div>
       </br>
 
@@ -30,6 +35,9 @@
           <label for="source-input">Source - REQUIRED</label> </br>
         <input onkeyup="createUtm()" id="source-input" type="text" name="" placeholder="REQUIRED" required>
         <span class="bar"></span>
+        <div class="hovertoshow">Move your mouse here for definition</div>
+        <div class="hide">The source is generally the platform that a link was used on – if the link was in a tweet the source would be twitter, if the link was in an email, the source would be the email platform, for example adestra. See the UTM Standards doc above for more </div>
+        </div>
         </div>
       </br>
 
@@ -50,6 +58,8 @@
             <option value="Refferal">Referral</option>
             <option value="Direct">Direct</option>
           </select>
+          <div class="hovertoshow">Move your mouse here for info</div>
+        <div class="hide"> The medium is the type of the source platform–it should adhere to one of the values in the boxes</div>
         </div>
       </br>
 
@@ -58,6 +68,8 @@
 
         <input onkeyup="createUtm()" id="campaign-input" type="text" name="" value="" required>
         <span class="bar"></span>
+        <div class="hovertoshow">Move your mouse here for info</div>
+        <div class="hide">This parameter can be used to label or describe the campaign, event, appeal, etc. that is being tracked. It is freeform, but should not have any spaces, instead either using all lower case, camel case or underscores to separate words</div>
         </div>
       </br>
 
@@ -65,6 +77,8 @@
           <label for="content-input">Content</label></br>
         <input onkeyup="createUtm()" id="content-input" type="text" name="" value="" required>
         <span class="bar"></span>
+        <div class="hovertoshow">Move your mouse here for info</div>
+        <div class="hide">Where a further tracking parameter is required, utm_contentcan be deployed. Use-cases for this parameter include where different ads are used for the same campaign, e.g.utm_content=man_outside_house and utm_content=woman_by_window</div>
         </div>
       </br>
 
@@ -72,19 +86,21 @@
           <label for="content-input">Terms</label></br>
         <input onkeyup="createUtm()" id="term-input" type="text" name="" value="" required>
         <span class="bar"></span>
+        <div class="hovertoshow">Move your mouse here for info</div>
+        <div class="hide">This field is generally used in paid searchcampaigns to differentiate between keywords. However, it can also be used for further categorisation of campaign activity.</div>
         </div>
       </br>
 
         <div>
-          <button onclick="myFunction()">Generate UTM</button>
+          <button onclick="myFunction()" input type = "submit">Generate UTM</button>
 
           <h1 id="demo"></h1>
-        </br>
 
           <p id="yourUTM"></p>
           
-          <button onclick="qr()">Generate QR</button>
+          <button onclick="qr()">Generate QR - MAKE SURE YOUR LINK WORKS FIRST!</button>
           <a id="qrLink"></p>
+        </br>
        </span>
        
 
