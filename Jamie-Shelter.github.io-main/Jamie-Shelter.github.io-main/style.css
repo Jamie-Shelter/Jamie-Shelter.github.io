@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
+
+textarea#utm {
+    width: 80%;
+    height: 2em;
+}
+
+input {
+    width: 80%;
+    height: 2em;
+}
+
+select {
+    width: 80%;
+    height: 2em;
+}
+
+body {
+position: centre;
+font-family: barlow;
+margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+button {
+    background-color: #f40e22;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .hide {
+    display: none;
+  }
+      
+  .hovertoshow:hover + .hide {
+    display: block;
+    color: red;
+  }
