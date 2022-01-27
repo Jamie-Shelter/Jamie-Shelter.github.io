@@ -6,17 +6,17 @@
         <script defer  language="JavaScript" type="text/javascript" src="./main.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <title>My Page Title</title>
+        <title>Shelter UTM & QR Builder</title>
 
         <h1>Shelter UTM & Appeal Code Builder</h1>
-        <h2>Unsure what you need to do? Check the UTM Standards <a href="https://shelteruk-my.sharepoint.com/:b:/g/personal/sam_berger_shelter_org_uk/Ed9DcO3ClDdMtWHUSsSrag0Bm4WAWmmh1RkAraUxCwWPwA?e=O9QhHA">here</a></h2>
+        <h2>Unsure what you need to do? Check the UTM Standards & Definitions here <a href="https://shelteruk-my.sharepoint.com/:b:/g/personal/sam_berger_shelter_org_uk/Ed9DcO3ClDdMtWHUSsSrag0Bm4WAWmmh1RkAraUxCwWPwA?e=O9QhHA">here</a></h2>
         <p>Made by the PDI Team - Seen a bug? <a href="mailto:jamie_tringham@shelter.org.uk"> report it</a>
         <p>Want PDI to make your team something cool? <a href="mailto:productdevandinnovation@shelter.org.uk"> request it</a>
-        <p><b><strong>YOU</strong></b> are responsible for making sure the information is correct on this form</p>
-
+       
+        <p>Want to get the results of your campaign? fill in the <a href="https://docs.google.com/forms/d/e/1FAIpQLScO8RFpPo7n7awi1NJC-MIh21znfRuUQh3FmWdhf3JTPLhTUw/viewform">Digital Analytics Job Request Form</a>
 
         <div class="input">
-        <label for="url-input">Url</label> </br>
+        <label for="url-input"><strong>URL</strong></label> - This should be to the donate page</br>
         <input onkeyup="createUtm()" id="url-input" type="text" name="" value="https://england.shelter.org.uk/donate" required>
         <span class="bar"></span>
         </div>
@@ -26,14 +26,14 @@
         
         
         <div class="input">
-        <label for="url-input">Appeal / Campaign Code</label> </br>
+        <label for="url-input"><strong>Appeal / Campaign Code</strong></label> - Where does this money go?
         <input onkeyup="createUtm()" id="ac-input" type="text" name="" value="" placeholder="REQUIRED">
         <span class="bar"></span>
         </div>
       </br>
 
         <div class="input">
-          <label for="source-input">Source - REQUIRED</label> </br>
+          <label for="source-input"><strong>Source</strong></label> - What platform are you posting on? eg Twitter
         <input onkeyup="createUtm()" id="source-input" type="text" name="" placeholder="REQUIRED" required>
         <span class="bar"></span>
         </div>
@@ -41,7 +41,7 @@
       </br>
 
         <div class="input">
-          <label for="medium-input">Medium - REQUIRED</label> </br>
+          <label for="medium-input"><strong>Medium</strong></label> - Type of platform this is going? 
           <select name="" value="" id="medium-input" type="select">
             <option value="">REQUIRED</option>
             <option value="paid_social">Paid Social</option>
@@ -61,7 +61,7 @@
       </br>
 
         <div class="input">
-          <label for="medium-input">Campaign</label> </br>
+          <label for="medium-input"><strong>Campaign</strong></label> - Describe the event e.g. thebigwalk
 
         <input onkeyup="createUtm()" id="campaign-input" type="text" name="" value="" required>
         <span class="bar"></span>
@@ -70,14 +70,14 @@
       </br>
 
         <div class="input">
-          <label for="content-input">Content</label></br>
+          <label for="content-input"><strong>Content</strong></label> - Are there different bits of content this will be next to?
         <input onkeyup="createUtm()" id="content-input" type="text" name="" value="" required>
         <span class="bar"></span>
         </div>
       </br>
 
         <div class="input">
-          <label for="content-input">Terms</label></br>
+          <label for="content-input"><strong>Terms</strong></label> - Additional info you'd like to be tracked
         <input onkeyup="createUtm()" id="term-input" type="text" name="" value="" required>
         <span class="bar"></span>
         </div>
