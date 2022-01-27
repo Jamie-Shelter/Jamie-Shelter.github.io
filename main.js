@@ -69,13 +69,11 @@ function addUtmTerm() {
 }
 
 function createUtm() {
-  var utm = addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
-  document.getElementById("utm").value = utm;
+  let utm = addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
+  document.getElementById("utm").value;
 }
 
-function yourUtm() {
-  document.getElementById("makeutm").innerHTML = utm;
-}
+let data = addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
 
 
 function myFunction() {
@@ -85,7 +83,7 @@ function myFunction() {
 }
 if(document.getElementById("source-input").value.length == 0)
 {
-    alert("No Source! YOU WILL NOT KNOW WHERE ")
+    alert("No Source! YOU WILL NOT KNOW WHERE THIS LINK CAME FROM.")
 }
 if(document.getElementById("medium-input").value.length == 0)
 {
@@ -100,6 +98,35 @@ if(document.getElementById("medium-input").value.length == 0)
       document.getElementById("yourUTM").innerHTML = addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
 }
 
+let html = addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
+
 function qr() {
-  document.getElementById("qrLink").innerHTML = "Follow this link for a QR code" + "https://api.qrserver.com/v1/create-qr-code/?data=" + addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
+  if(document.getElementById("ac-input").value.length == 0)
+  {
+    document.getElementById("qrLink").innerHTML = "error - no appeal code. If you don't need an appeal code, use another link builder"
+  }
+  else
+  {
+      document.getElementById("qrLink").innerHTML = "https://api.qrserver.com/v1/create-qr-code/?data=" + addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm() + "&svg"; 
+    
+      document.appendElementbyId("qrSVG").innerHTML = "<img src='https://api.qrserver.com/v1/create-qr-code/?data='" + addUrlDecorator() + addAcSource() + addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
+  } 
+
 }
+
+function generateQrDownload() {
+  var baseUrl = 'https://api.qrserver.com/v1/create-qr-code/?data='
+  var dataurl = addUrlDecorator()+addAcSource()+addUtmSource() + addUtmMedium() + addUtmCampaign() + addUtmContent() + addUtmTerm();
+  var encodedurl = encodeURIComponent(dataurl);
+
+  var url = baseUrl + encodedurl + "&format=svg"
+
+  document.getElementById('qrImg').src = url;
+console.log(url)
+
+}
+
+
+
+
+
